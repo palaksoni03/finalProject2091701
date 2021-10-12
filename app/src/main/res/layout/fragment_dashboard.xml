@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<layout>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/cardview_light_background"
     tools:context=".ui.dashboard.DashboardFragment">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/pkd_imgv"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
+        android:layout_width="240dp"
+        android:layout_height="180dp"
         android:layout_marginTop="16dp"
+        android:layout_gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/pkd_txtpname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -22,65 +28,74 @@
         android:id="@+id/pkd_txtpname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginVertical="15dp"
+        android:layout_gravity="center"
         android:text="Name"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/pkd_txtpdesc"
+        android:textColor="#4f4c4c"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pkd_imgv" />
+        app:layout_constraintHorizontal_bias="0.498" />
 
     <TextView
-        android:id="@+id/pkd_txtpdesc"
+        android:id="@+id/habitTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:textSize="15sp"
-        android:text="Test Data"
-        app:layout_constraintBottom_toTopOf="@+id/pkd_txtpability"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pkd_txtpname" />
+        android:layout_marginStart="20dp"
+        android:layout_marginVertical="15dp"
+        android:textSize="16dp"
+        android:textColor="#4f4e4d"
+        android:text="Habit" />
 
     <TextView
-        android:id="@+id/pkd_txtpability"
+        android:id="@+id/lifespanTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="Test Data"
-        app:layout_constraintBottom_toTopOf="@+id/pkd_txtptype"
-        app:layout_constraintStart_toStartOf="@+id/pkd_txtpdesc"
-        app:layout_constraintTop_toBottomOf="@+id/pkd_txtpdesc" />
+        android:layout_marginStart="20dp"
+        android:layout_marginVertical="15dp"
+        android:textSize="16dp"
+        android:textColor="#4f4e4d"
+        android:text="Lifespan" />
 
     <TextView
-        android:id="@+id/pkd_txtptype"
+        android:id="@+id/exposureTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="Test Data"
-        app:layout_constraintBottom_toTopOf="@+id/pkd_txtpheight"
-        app:layout_constraintStart_toStartOf="@+id/pkd_txtpability"
-        app:layout_constraintTop_toBottomOf="@+id/pkd_txtpability" />
+        android:layout_marginStart="20dp"
+        android:layout_marginVertical="15dp"
+        android:textSize="16dp"
+        android:textColor="#4f4e4d"
+        android:text="Exposure" />
 
     <TextView
-        android:id="@+id/pkd_txtpheight"
+        android:id="@+id/waterTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="Test Data"
-        app:layout_constraintBottom_toTopOf="@+id/pkd_txtpweight"
-        app:layout_constraintStart_toStartOf="@+id/pkd_txtptype"
-        app:layout_constraintTop_toBottomOf="@+id/pkd_txtptype" />
+        android:layout_marginStart="20dp"
+        android:layout_marginVertical="15dp"
+        android:textSize="16dp"
+        android:textColor="#4f4e4d"
+        android:text="Water" />
 
     <TextView
-        android:id="@+id/pkd_txtpweight"
+        android:id="@+id/featureTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="Test Data"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/pkd_txtpheight"
-        app:layout_constraintTop_toBottomOf="@+id/pkd_txtpheight" />
+        android:layout_marginStart="20dp"
+        android:layout_marginVertical="15dp"
+        android:textSize="16dp"
+        android:textColor="#4f4e4d"
+        android:text="Features" />
 
+    <TextView
+        android:id="@+id/specieTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginVertical="15dp"
+        android:textSize="16dp"
+        android:textColor="#4f4e4d"
+        android:text="Species" />
 
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
