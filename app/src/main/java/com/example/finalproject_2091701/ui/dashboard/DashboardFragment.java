@@ -43,16 +43,18 @@ public class DashboardFragment extends Fragment {
         binding.waterTxt.setText("Water: "+plant.getWater());
         binding.featureTxt.setText("Feature: "+plant.getFeatures());
 
-//        JSONArray arr = new JSONArray(plant.getSpecies());
-//        for (int i=0;i<=arr.length();i++){
-//            try{
-//                binding.specieTxt.setText("Species: "+ "value", TextView.BufferType.valueOf(arr.getJSONObject(i).getString("name")));
-//            } catch (JSONException e){
-//                e.printStackTrace();
-//            }
-//        }
+       String s = "";
+        for (int i=0;i<plant.getSpecies().size();i++){
+
+                s = s+plant.getSpecies().get(i).getName();
+                if(i!=plant.getSpecies().size()-1){
+                    s=s+", ";
+                }
+
+        }
 
 
+        binding.specieTxt.setText("Species: "+s);
 
 
         return root;
