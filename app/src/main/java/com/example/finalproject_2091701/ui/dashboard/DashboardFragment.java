@@ -17,6 +17,9 @@ import com.example.finalproject_2091701.databinding.FragmentDashboardBinding;
 import com.example.finalproject_2091701.model.Plant;
 import com.squareup.picasso.Picasso;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
@@ -39,7 +42,17 @@ public class DashboardFragment extends Fragment {
         binding.exposureTxt.setText("Exposure: "+plant.getExposure());
         binding.waterTxt.setText("Water: "+plant.getWater());
         binding.featureTxt.setText("Feature: "+plant.getFeatures());
-        binding.specieTxt.setText("Species: "+(CharSequence) plant.getSpecies());
+
+//        JSONArray arr = new JSONArray(plant.getSpecies());
+//        for (int i=0;i<=arr.length();i++){
+//            try{
+//                binding.specieTxt.setText("Species: "+ "value", TextView.BufferType.valueOf(arr.getJSONObject(i).getString("name")));
+//            } catch (JSONException e){
+//                e.printStackTrace();
+//            }
+//        }
+
+
 
 
         return root;
